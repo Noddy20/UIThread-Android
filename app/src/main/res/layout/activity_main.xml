@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_thread_message"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/tv_thread_message"
+        android:textSize="18sp"
+        />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tv_thread_message"
+        android:layout_marginTop="16dp"
+        android:checkedButton="@id/radioBtnMainThread"
+        android:id="@+id/radioGroup"
+        >
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/main_thread"
+            android:id="@+id/radioBtnMainThread"
+            android:textSize="18sp"
+            />
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/worker_thread"
+            android:id="@+id/radioBtnWorkerThread"
+            android:textSize="18sp"
+            />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/your_message"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_app_message"
+        app:layout_constraintStart_toStartOf="@id/tv_app_message"
+        android:layout_marginBottom="8dp"
+        />
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        tools:text="@string/app_message"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        app:layout_constraintBottom_toTopOf="@id/btnUpdate"
+        android:layout_marginHorizontal="16dp"
+        android:id="@+id/tv_app_message"
+        android:textSize="24sp"
+        android:background="@drawable/shape_bg"
+        android:padding="16dp"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/update"
+        android:textAllCaps="false"
+        android:id="@+id/btnUpdate"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

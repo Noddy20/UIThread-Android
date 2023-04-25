@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">UIThread Android</string>
+
+    <string name="select_thread_message">Update the message TextView on the selected thread :</string>
+    <string name="main_thread">Main Thread</string>
+    <string name="worker_thread">Worker Thread</string>
+
+    <string name="app_message">Hello From - %1$s</string>
+    <string name="your_message">Press Update button to see message :</string>
+    <string name="update">Update</string>
+</resources>
